@@ -2,7 +2,7 @@ version: "0.5"
 
 processes:
   adminer:
-   command: "frankenphp php-server --listen ${HOST}:18080"
+   command: 'env PHP_INI_SCAN_DIR=${PWD}/config/php:$(frankenphp environ | grep -oP "(?<=PHP_INI_SCAN_DIR=).*") frankenphp php-server --listen ${HOST}:18080'
    availability:
     restart: "always"
    readiness_probe:
