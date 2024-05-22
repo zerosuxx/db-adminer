@@ -2,7 +2,8 @@
 
 ## Run services
 ```shell
-$ make up
+$ make up # in foreground
+$ make upd # in background
 ```
 
 ## Stop services

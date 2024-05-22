@@ -2,7 +2,10 @@ version: "0.5"
 
 processes:
   adminer:
-   command: frankenphp php-server --listen 0.0.0.0:18080
-   is_daemon: true
+   command: "frankenphp php-server --listen ${HOST}:18080"
    availability:
     restart: "always"
+   readiness_probe:
+    http_get:
+     host: ${HOST}
+     port: 18080
