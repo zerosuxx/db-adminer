@@ -1,0 +1,53 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "frankenphp@latest": {
+      "last_modified": "2024-05-17T18:08:26Z",
+      "resolved": "github:NixOS/nixpkgs/0837fbf227364d79cbae8fff2378125526905cbe#frankenphp",
+      "source": "devbox-search",
+      "version": "1.1.5",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/mb68f09kwyhyyi1c51yw7b2m307yhc7h-frankenphp-1.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/mb68f09kwyhyyi1c51yw7b2m307yhc7h-frankenphp-1.1.5"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ncbiif6rgkdiz7gkv7b3wvj1a00pqbxn-frankenphp-1.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ncbiif6rgkdiz7gkv7b3wvj1a00pqbxn-frankenphp-1.1.5"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/kw2bc097a2safrgsqamjfh1z1ywhhs9j-frankenphp-1.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/kw2bc097a2safrgsqamjfh1z1ywhhs9j-frankenphp-1.1.5"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/f001jlr8wchyv85a0ywy7yxjbi2d8hab-frankenphp-1.1.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/f001jlr8wchyv85a0ywy7yxjbi2d8hab-frankenphp-1.1.5"
+        }
+      }
+    }
+  }
+}
