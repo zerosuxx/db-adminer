@@ -78,7 +78,7 @@ jobs:
 
       - name: Build Adminer
         run: |
-          git clone https://github.com/dunglas/frankenphp && cd build
+          git clone https://github.com/dunglas/frankenphp build && cd build
           cp -R ../scripts ../patches ./
           bash ./scripts/apply-patches.sh
           ./build-static.sh
