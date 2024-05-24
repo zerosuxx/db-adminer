@@ -38,7 +38,6 @@ jobs:
           docker buildx build . --tag static-builder-${{ matrix.platform }} --platform ${{ matrix.platform }} --file docker/static-builder.Dockerfile --load 
           docker run \
             --rm \
-            -it \
             -e NO_COMPRESS=${NO_COMPRESS} \
             -e EMBED=${EMBED} \
             -v $(pwd)/dist:/dist \
@@ -52,7 +51,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: adminer-linux-${{ matrix.platform == 'linux/amd64' && 'x86_64' || 'aarch64' }}
-          path: dist/adminer-linux-${{ matrix.platform == 'linux/amd64' && 'x86_64' || 'aarch64' }}
+          path: dist/
 
 
   build-mac:
@@ -91,4 +90,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: adminer-mac-${{ matrix.platform }}
-          path: dist/adminer-mac-${{ matrix.platform }}
+          path: dist/
