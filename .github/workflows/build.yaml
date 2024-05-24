@@ -7,6 +7,7 @@ on:
 env:
   NO_COMPRESS: '1'
   EMBED: 'dist/app'
+  DIST_FILE_PATTERN: 'dist/adminer*'
 
 jobs:
   build-linux:
@@ -51,7 +52,13 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: adminer-linux-${{ matrix.platform == 'linux/amd64' && 'x86_64' || 'aarch64' }}
-          path: dist/
+          path: ${{ env.DIST_FILE_PATTERN }}
+
+      - name: Release
+        if: github.ref_type == 'tag'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.DIST_FILE_PATTERN }}
 
   build-mac:
     strategy:
@@ -71,9 +78,6 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: '1.22'
-          cache-dependency-path: |
-            build/go.sum 
-            build/caddy/go.sum
 
       - name: Setup PHP with tools
         uses: shivammathur/setup-php@v2
@@ -98,4 +102,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: adminer-mac-${{ matrix.platform }}
-          path: build/dist/adminer*
+          path: build/${{ env.DIST_FILE_PATTERN }}
+
+      - name: Release
+        if: github.ref_type == 'tag'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/${{ env.DIST_FILE_PATTERN }}
