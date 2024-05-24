@@ -6,7 +6,7 @@ on:
 
 env:
   NO_COMPRESS: '1'
-  EMBED: 'dist/app/'
+  EMBED: 'dist/app'
 
 jobs:
   build-linux:
@@ -74,6 +74,14 @@ jobs:
           cache-dependency-path: |
             build/go.sum 
             build/caddy/go.sum
+
+      - name: Setup PHP with tools
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Adminer
         run: |
