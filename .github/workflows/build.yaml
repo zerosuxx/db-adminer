@@ -57,7 +57,6 @@ jobs:
   build-mac:
     strategy:
       fail-fast: false
-      max-parallel: 1
       matrix:
         platform: ['arm64', 'x86_64']
     name: Build macOS ${{ matrix.platform }} binaries
@@ -84,6 +83,8 @@ jobs:
           bash ./scripts/apply-patches.sh
           ./build-static.sh
           bash ./scripts/rename-binaries.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
