@@ -78,7 +78,7 @@ jobs:
 
       - name: Build Adminer
         run: |
-          git clone https://github.com/dunglas/frankenphp && cd frankenphp
+          git clone https://github.com/dunglas/frankenphp && cd build
           cp -R ../scripts ../patches ./
           bash ./scripts/apply-patches.sh
           ./build-static.sh
@@ -90,4 +90,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: adminer-mac-${{ matrix.platform }}
-          path: dist/
+          path: build/dist/
