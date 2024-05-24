@@ -6,7 +6,7 @@ on:
 
 env:
   NO_COMPRESS: '1'
-  EMBED: 'dist/app/''
+  EMBED: 'dist/app/'
 
 jobs:
   build-linux:
