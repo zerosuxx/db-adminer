@@ -15,9 +15,10 @@ jobs:
       fail-fast: false
       matrix:
         platform: ['linux/arm64', 'linux/amd64']
-
     name: Build ${{ matrix.platform }} static binary
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -67,6 +68,8 @@ jobs:
         platform: ['arm64', 'x86_64']
     name: Build macOS ${{ matrix.platform }} binaries
     runs-on: ${{ matrix.platform == 'arm64' && 'macos-14' || 'macos-13' }}
+    permissions:
+      contents: write
     env:
       HOMEBREW_NO_AUTO_UPDATE: 1
     steps:
