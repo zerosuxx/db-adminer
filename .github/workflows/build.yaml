@@ -73,8 +73,8 @@ jobs:
         with:
           go-version: '1.22'
           cache-dependency-path: |
-            go.sum 
-            caddy/go.sum
+            build/go.sum 
+            build/caddy/go.sum
 
       - name: Build Adminer
         run: |
@@ -90,4 +90,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: adminer-mac-${{ matrix.platform }}
-          path: build/dist/
+          path: build/dist/adminer*
