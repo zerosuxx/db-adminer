@@ -16,16 +16,13 @@ jobs:
         with:
           ref: ${{ steps.check.outputs.ref }}
       
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-      
       - name: Create static build files
         run: bash scripts/create-static-build-files.sh
-
   
   build-mac:
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         platform: ['arm64', 'x86_64']
     name: Build macOS ${{ matrix.platform }} binaries
