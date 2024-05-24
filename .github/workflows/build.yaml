@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
 
 env:
-  NO_COMPRESS: "1"
-  EMBED: "dist/app/"
+  NO_COMPRESS: '1'
+  EMBED: 'dist/app/''
 
 jobs:
   build-linux:
@@ -48,7 +48,7 @@ jobs:
         run: bash ./scripts/rename-binaries.sh
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: adminer-linux-${{ matrix.platform == 'linux/amd64' && 'x86_64' || 'aarch64' }}
           path: dist/
@@ -86,8 +86,7 @@ jobs:
           bash ./scripts/rename-binaries.sh
 
       - name: Upload artifact
-        if: github.ref_type == 'branch'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: adminer-mac-${{ matrix.platform }}
           path: dist/

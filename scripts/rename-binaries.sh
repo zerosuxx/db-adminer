@@ -2,7 +2,7 @@
 
 set -x
 
-for i in dist/*
+for i in dist/frankenphp*
 do
     mv "$i" "${i/frankenphp/adminer}"
 done
