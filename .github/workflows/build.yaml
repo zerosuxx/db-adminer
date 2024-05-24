@@ -53,7 +53,6 @@ jobs:
           name: adminer-linux-${{ matrix.platform == 'linux/amd64' && 'x86_64' || 'aarch64' }}
           path: dist/
 
-
   build-mac:
     strategy:
       fail-fast: false
@@ -80,7 +79,7 @@ jobs:
         run: |
           git clone https://github.com/dunglas/frankenphp build && cd build
           cp -R ../scripts ../patches ./
-          mkdir -p "${EMBED}" && cp -R ../static-build-files "${EMBED}"
+          mkdir -p "${EMBED}" && cp -R ../static-build-files/* "${EMBED}/"
           bash ./scripts/apply-patches.sh
           ./build-static.sh
           bash ./scripts/rename-binaries.sh
