@@ -2,4 +2,4 @@
 
 set -x
 
-patch caddy/frankenphp/main.go < /tmp/patches/caddy_frankenphp_main_go.patch
+patch caddy/frankenphp/main.go < ./patches/caddy_frankenphp_main_go.patch

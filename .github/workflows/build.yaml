@@ -47,9 +47,10 @@ jobs:
         run: |
           php -v || true
           git clone https://github.com/dunglas/frankenphp && cd frankenphp
-          bash ../scripts/apply-patches.sh
+          cp -R ../scripts ../patches ./
+          bash ./scripts/apply-patches.sh
           ./build-static.sh
-          bash ../scripts/rename-binaries.sh
+          bash ./scripts/rename-binaries.sh
 
       - name: Upload artifact
         if: github.ref_type == 'branch'
