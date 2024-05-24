@@ -1,0 +1,31 @@
+diff --git a/caddy/frankenphp/main.go b/caddy/frankenphp/main.go
+index 52a2ee8..85c8bcc 100644
+--- a/caddy/frankenphp/main.go
++++ b/caddy/frankenphp/main.go
+@@ -1,6 +1,9 @@
+ package main
+ 
+ import (
++	"os"
++	"strings"
++
+ 	"github.com/caddyserver/caddy/v2"
+ 	caddycmd "github.com/caddyserver/caddy/v2/cmd"
+ 	"go.uber.org/automaxprocs/maxprocs"
+@@ -15,6 +18,16 @@ import (
+ )
+ 
+ func main() {
++	defaultCommand := "php-server"
++	if len(os.Args) < 2 {
++		os.Args = append(os.Args, defaultCommand)
++	} else if strings.HasPrefix(os.Args[1], "-") {
++		args := []string{}
++		args = append(args, os.Args[:1]...)
++		args = append(args, defaultCommand)
++		os.Args = append(args, os.Args[1:]...)
++	}
++	
+ 	undo, err := maxprocs.Set()
+ 	defer undo()
+ 	if err != nil {
