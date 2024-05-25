@@ -4,5 +4,5 @@ set -x
 
 for i in dist/frankenphp*
 do
-    mv "$i" "${i/frankenphp/adminer}"
+    mv "$i" "$(echo "$i" | sed -e 's#frankenphp#adminer#g;s#mac#darwin#g')"
 done
