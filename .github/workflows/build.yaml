@@ -104,7 +104,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: adminer-${{ matrix.platform == 'arm64' && 'aarch64' || 'x86_64' }}-darwing
+          name: adminer-${{ matrix.platform == 'arm64' && 'aarch64' || 'x86_64' }}-darwin
           path: build/${{ env.DIST_FILE_PATTERN }}
 
       - name: Release
