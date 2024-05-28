@@ -81,6 +81,7 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: '1.22'
+          cache: false
 
       - name: Setup PHP with tools
         uses: shivammathur/setup-php@v2
