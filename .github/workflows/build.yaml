@@ -52,7 +52,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: adminer-linux-${{ matrix.platform == 'linux/amd64' && 'x86_64' || 'aarch64' }}
+          name: adminer-${{ matrix.platform == 'linux/amd64' && 'x86_64' || 'aarch64' }}-linux
           path: ${{ env.DIST_FILE_PATTERN }}
 
       - name: Release
@@ -104,7 +104,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: adminer-darwin-${{ matrix.platform }}
+          name: adminer-${{ matrix.platform == 'arm64' && 'aarch64' || 'x86_64' }}-darwing
           path: build/${{ env.DIST_FILE_PATTERN }}
 
       - name: Release
