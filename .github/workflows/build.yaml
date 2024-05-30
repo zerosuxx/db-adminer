@@ -94,6 +94,7 @@ jobs:
       - name: Build Adminer
         run: |
           git clone https://github.com/dunglas/frankenphp build && cd build
+          git checkout v1.1.5
           cp -R ../scripts ../patches ./
           mkdir -p "${EMBED}" && cp -R ../static-build-files/* "${EMBED}/"
           bash ./scripts/apply-patches.sh
