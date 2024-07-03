@@ -1,9 +1,9 @@
 {
   "lockfile_version": "1",
   "packages": {
-    "frankenphp@latest": {
-      "last_modified": "2024-05-17T18:08:26Z",
-      "resolved": "github:NixOS/nixpkgs/0837fbf227364d79cbae8fff2378125526905cbe#frankenphp",
+    "frankenphp@1.1.5": {
+      "last_modified": "2024-06-03T07:19:07Z",
+      "resolved": "github:NixOS/nixpkgs/4a4ecb0ab415c9fccfb005567a215e6a9564cdf5#frankenphp",
       "source": "devbox-search",
       "version": "1.1.5",
       "systems": {
@@ -11,41 +11,41 @@
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/mb68f09kwyhyyi1c51yw7b2m307yhc7h-frankenphp-1.1.5",
+              "path": "/nix/store/j6m7g8pj0fm60wp0jy76z4jjica50prc-frankenphp-1.1.5",
               "default": true
             }
           ],
-          "store_path": "/nix/store/mb68f09kwyhyyi1c51yw7b2m307yhc7h-frankenphp-1.1.5"
+          "store_path": "/nix/store/j6m7g8pj0fm60wp0jy76z4jjica50prc-frankenphp-1.1.5"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/ncbiif6rgkdiz7gkv7b3wvj1a00pqbxn-frankenphp-1.1.5",
+              "path": "/nix/store/w3kybgg7vfbmn2hp2j8a7z53mp62rd98-frankenphp-1.1.5",
               "default": true
             }
           ],
-          "store_path": "/nix/store/ncbiif6rgkdiz7gkv7b3wvj1a00pqbxn-frankenphp-1.1.5"
+          "store_path": "/nix/store/w3kybgg7vfbmn2hp2j8a7z53mp62rd98-frankenphp-1.1.5"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/kw2bc097a2safrgsqamjfh1z1ywhhs9j-frankenphp-1.1.5",
+              "path": "/nix/store/9kx0jdxl43g87bcm0cp89s7j1vmx8rab-frankenphp-1.1.5",
               "default": true
             }
           ],
-          "store_path": "/nix/store/kw2bc097a2safrgsqamjfh1z1ywhhs9j-frankenphp-1.1.5"
+          "store_path": "/nix/store/9kx0jdxl43g87bcm0cp89s7j1vmx8rab-frankenphp-1.1.5"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/f001jlr8wchyv85a0ywy7yxjbi2d8hab-frankenphp-1.1.5",
+              "path": "/nix/store/ilnpk9mrvbifjcfwa9833y10b8jflvsm-frankenphp-1.1.5",
               "default": true
             }
           ],
-          "store_path": "/nix/store/f001jlr8wchyv85a0ywy7yxjbi2d8hab-frankenphp-1.1.5"
+          "store_path": "/nix/store/ilnpk9mrvbifjcfwa9833y10b8jflvsm-frankenphp-1.1.5"
         }
       }
     }

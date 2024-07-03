@@ -1,6 +1,12 @@
 {
   "$schema":  "https://raw.githubusercontent.com/jetify-com/devbox/0.10.7/.schema/devbox.schema.json",
-  "packages": ["frankenphp@latest"],
+  "packages": [
+    "frankenphp@1.1.5",
+    "github:zerosuxx/nixpkgs#adminer"
+  ],
+  "env": {
+    "SESSION_PATH": "${PWD}/.session"
+  },
   "shell": {
     "init_hook": [
       "echo 'Welcome to devbox!' > /dev/null"

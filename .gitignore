@@ -1,4 +1,6 @@
+.idea/
 .devbox/
 static-build-files/
 dist/
 vendor/
+.session/
