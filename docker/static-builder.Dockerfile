@@ -1,6 +1,6 @@
 ARG FRANKENPHP_VERSION="1.5.0"
 
-FROM dunglas/frankenphp:static-builder-musl-${FRANKENPHP_VERSION}
+FROM dunglas/frankenphp:static-builder-gnu-${FRANKENPHP_VERSION}
 
 ENV FRANKENPHP_VERSION=${FRANKENPHP_VERSION}
 
