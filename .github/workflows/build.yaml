@@ -97,7 +97,7 @@ jobs:
         run: |
           git clone https://github.com/dunglas/frankenphp build && cd build
           git checkout v${{ env.FRANKENPHP_VERSION }}
-          cp -R ../scripts ../patches ./
+          cp -R ../scripts ./
           mkdir -p "${EMBED}" && cp -R ../static-build-files/* "${EMBED}/"
           bash ./scripts/apply-patches.sh
           ./build-static.sh
