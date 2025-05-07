@@ -33,13 +33,13 @@ class AdminerAuthPlugin extends Adminer\Plugin
 	public function credentials(): array
 	{
 		if (!empty($this->credentials) && ($credential = array_find($this->credentials, fn(Credential $credential) => $credential->server === Adminer\SERVER))) {
-			$inputUsername = filter_input(INPUT_GET, 'username');
-			$inputPassword = filter_input(INPUT_GET, 'password');
+            $inputUsername = filter_input(INPUT_GET, 'username');
+			$inputPassword = (string)Adminer\get_password();
 
 			return [
 				Adminer\SERVER,
 				$inputUsername !== '' && $inputUsername !== NULL ? $inputUsername : $credential->username,
-				$inputPassword !== '' && $inputPassword !== NULL ? $inputPassword : $credential->password,
+				$inputPassword !== '' ? $inputPassword : $credential->password,
 			];
 		}
 
