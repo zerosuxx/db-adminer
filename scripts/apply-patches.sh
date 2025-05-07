@@ -2,4 +2,4 @@
 
 set -x
 
-patch caddy/frankenphp/main.go < ./patches/caddy_frankenphp_main_go.patch
+patch caddy/frankenphp/main.go < <(diff -u <(curl -s https://raw.githubusercontent.com/dunglas/frankenphp/refs/tags/v${FRANKENPHP_VERSION:-'1.5.0'}/caddy/frankenphp/main.go) ./caddy/frankenphp/main.go)

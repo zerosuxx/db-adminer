@@ -3,9 +3,13 @@ version: "0.5"
 processes:
   adminer:
    command: >
+    if [ -f "init.sh" ]; then
+      . init.sh
+    fi
+
     mkdir -p ${SESSION_PATH};
     env PHP_INI_SCAN_DIR=${PWD}/config/php:$(frankenphp environ | grep -oP "(?<=PHP_INI_SCAN_DIR=).*")
-    frankenphp php-server --listen ${HOST}:18080
+     frankenphp php-server --listen ${HOST}:18080 --root ${PWD}/public
    availability:
     restart: "always"
    readiness_probe:

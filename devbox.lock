@@ -1,51 +1,105 @@
 {
   "lockfile_version": "1",
   "packages": {
-    "frankenphp@1.1.5": {
-      "last_modified": "2024-06-03T07:19:07Z",
-      "resolved": "github:NixOS/nixpkgs/4a4ecb0ab415c9fccfb005567a215e6a9564cdf5#frankenphp",
+    "frankenphp@1.5.0": {
+      "last_modified": "2025-04-12T15:53:49Z",
+      "resolved": "github:NixOS/nixpkgs/52d0eded529af34e91df6b2a2bc32eb636637cd2#frankenphp",
       "source": "devbox-search",
-      "version": "1.1.5",
+      "version": "1.5.0",
       "systems": {
         "aarch64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/j6m7g8pj0fm60wp0jy76z4jjica50prc-frankenphp-1.1.5",
+              "path": "/nix/store/gf2g2srrzk9jgzrcj9pi2x0hb2k2kakc-frankenphp-1.5.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/j6m7g8pj0fm60wp0jy76z4jjica50prc-frankenphp-1.1.5"
+          "store_path": "/nix/store/gf2g2srrzk9jgzrcj9pi2x0hb2k2kakc-frankenphp-1.5.0"
         },
         "aarch64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/w3kybgg7vfbmn2hp2j8a7z53mp62rd98-frankenphp-1.1.5",
+              "path": "/nix/store/krns0gsn6zssc46lmg69wlr3kyfcl7dj-frankenphp-1.5.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/w3kybgg7vfbmn2hp2j8a7z53mp62rd98-frankenphp-1.1.5"
+          "store_path": "/nix/store/krns0gsn6zssc46lmg69wlr3kyfcl7dj-frankenphp-1.5.0"
         },
         "x86_64-darwin": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/9kx0jdxl43g87bcm0cp89s7j1vmx8rab-frankenphp-1.1.5",
+              "path": "/nix/store/3h6mvn5s3jj2vl7wd5qdcfnxli6bkbdh-frankenphp-1.5.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/9kx0jdxl43g87bcm0cp89s7j1vmx8rab-frankenphp-1.1.5"
+          "store_path": "/nix/store/3h6mvn5s3jj2vl7wd5qdcfnxli6bkbdh-frankenphp-1.5.0"
         },
         "x86_64-linux": {
           "outputs": [
             {
               "name": "out",
-              "path": "/nix/store/ilnpk9mrvbifjcfwa9833y10b8jflvsm-frankenphp-1.1.5",
+              "path": "/nix/store/j83i3riq7p3djznnpxgwr17bzr4h452q-frankenphp-1.5.0",
               "default": true
             }
           ],
-          "store_path": "/nix/store/ilnpk9mrvbifjcfwa9833y10b8jflvsm-frankenphp-1.1.5"
+          "store_path": "/nix/store/j83i3riq7p3djznnpxgwr17bzr4h452q-frankenphp-1.5.0"
+        }
+      }
+    },
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "resolved": "github:NixOS/nixpkgs/3549532663732bfd89993204d40543e9edaec4f2?lastModified=1742272065&narHash=sha256-ud8vcSzJsZ%2FCK%2Br8%2Fv0lyf4yUntVmDq6Z0A41ODfWbE%3D"
+    },
+    "github:zerosuxx/nixpkgs#adminer": {
+      "resolved": "github:zerosuxx/nixpkgs/149b02605e8df2c2ba03dfc9ef5147ea891d2c08?lastModified=1725375455&narHash=sha256-LYJINJZ0%2B9J2pDzfP17z9AiWeuoksq9qDZ%2FkQoPgb4M%3D#adminer"
+    },
+    "php84Packages.composer@2.8.5": {
+      "last_modified": "2025-04-12T15:53:49Z",
+      "resolved": "github:NixOS/nixpkgs/52d0eded529af34e91df6b2a2bc32eb636637cd2#php84Packages.composer",
+      "source": "devbox-search",
+      "version": "2.8.5",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hr5wfi0hixxz7849w9m8fa0dlwb6agzj-composer-2.8.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hr5wfi0hixxz7849w9m8fa0dlwb6agzj-composer-2.8.5"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/5p2wwy92xkl6plq0bi78068q0nvb7lwg-composer-2.8.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/5p2wwy92xkl6plq0bi78068q0nvb7lwg-composer-2.8.5"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/wz2mbfrbnld5szcd1zz842bc6j58w9f6-composer-2.8.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/wz2mbfrbnld5szcd1zz842bc6j58w9f6-composer-2.8.5"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/9hbjbn7v2sa6smyq7qwjnj3fr8ldql23-composer-2.8.5",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/9hbjbn7v2sa6smyq7qwjnj3fr8ldql23-composer-2.8.5"
         }
       }
     }

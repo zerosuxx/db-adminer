@@ -4,3 +4,6 @@ static-build-files/
 dist/
 vendor/
 .session/
+init.sh
+adminer.php
+adminer/
