@@ -25,5 +25,5 @@ func main() {
         os.Args = append(args, os.Args[1:]...)
     }
 
-	caddycmd.Main()
+    caddycmd.Main()
 }
