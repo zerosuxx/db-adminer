@@ -68,6 +68,7 @@ class AdminerAuthPlugin extends Adminer\Plugin
                 document.querySelector('[name="auth[driver]"]').value = cred.driver;
                 document.querySelector('[name="auth[server]"]').value = cred.server;
                 document.querySelector('[name="auth[username]"]').value = cred.username;
+                document.querySelector('[name="auth[password]"]').value = '';
                 document.querySelector('[name="auth[db]"]').value = cred.db;
                 document.querySelector('[name="auth[ns]"]').value = cred.schema;
               });
