@@ -71,6 +71,7 @@ class AdminerAuthPlugin extends Adminer\Plugin
                 document.querySelector('[name="auth[password]"]').value = '';
                 document.querySelector('[name="auth[db]"]').value = cred.db;
                 document.querySelector('[name="auth[ns]"]').value = cred.schema;
+                document.querySelector('[name="auth[permanent]"]').checked = true;
               });
             </script>
             EOT;
