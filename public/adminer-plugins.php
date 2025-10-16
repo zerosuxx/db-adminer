@@ -54,6 +54,7 @@ class AdminerAuthPlugin extends Adminer\Plugin
 	{
 		if (!empty($this->credentials) && $name == 'driver') {
 			$heading .= '<select id="credential_selector">';
+			$heading .= '<option value="">-- Select credential --</option>';
 			foreach ($this->credentials as $credential) {
 				$heading .= '<option value="' . htmlspecialchars($credential) . '">' . htmlspecialchars($credential->server) . '</option>';
 			}
