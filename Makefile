@@ -14,6 +14,8 @@ up: ## Start services
 upd: ## Start services in background
 	devbox services start
 
+start: upd
+
 down: ## Stop services
 	devbox services down
 
