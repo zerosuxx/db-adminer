@@ -7,7 +7,7 @@ $ make install-devbox
 
 ## Download adminer
 ```shell
-$  curl -L -o public/adminer.php "https://github.com/vrana/adminer/releases/download/v5.4.1/adminer-5.4.1.php"
+$ curl -L -o public/adminer.php "https://github.com/vrana/adminer/releases/download/v5.4.2/adminer-5.4.2.php"
 ```
 
 ## Run services
